@@ -24,7 +24,7 @@ pipeline {
             steps {
                 sh 'docker login -u ndiparrey -p Nmanny06NE'
                 sh 'docker build -t qr-momo:v1 .'
-                sh 'docker tag qr-momo:v1 ndiparrey/emmy-ride:v1'
+                sh 'docker tag qr-momo:v1 ndiparrey/qr-momo:v1'
                 sh 'docker push ndiparrey/qr-momo:v1'
             }
         }
