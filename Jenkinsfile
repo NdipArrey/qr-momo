@@ -25,7 +25,7 @@ pipeline {
               withCredentials([usernamePassword(credentialsId: 'Dockerhub', usernameVariable: 'USERNAME',   passwordVariable: 'PASSWORD')]) {  
                 sh 'docker login -u $USERNAME -p $PASSWORD'
                 sh 'docker build -t qr-momo:v2 .'
-                sh 'docker tag qr-momo:v1 ndiparrey/qr-momo:v2'
+                sh 'docker tag qr-momo:v2 ndiparrey/qr-momo:v2'
                 sh 'docker push ndiparrey/qr-momo:v2'
 
               }
